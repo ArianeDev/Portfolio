@@ -61,14 +61,15 @@ main {
             position: absolute;
             display: flex;
             flex-direction: column;
-            gap: 6rem;
-            margin-top: 3rem;
+            gap: 2rem;
+            margin-top: 2rem;
             
             & h2 {
                 font-family: "Sour Gummy", serif;
                 font-size: 7rem;
                 letter-spacing: 1rem;
             }
+
             & :nth-child(1) {
                 color: rgba(29, 2, 74, 0.9);
             }
@@ -142,8 +143,7 @@ main {
             }
         }
     }
-    & #books {
-        background: linear-gradient(180deg, rgb(98, 0, 172) 0%,  rgb(0, 60, 51) 100%) ;
+    & #books, #movie, #music {
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -174,10 +174,32 @@ main {
                 height: 20rem;
                 border-radius: 1rem;
                 
+                /* & .text{
+                    position: relative;
+                    font-size: 1rem;
+                    padding: 1rem;
+                    top: 50%;
+                    z-index: 1;
+
+                    & p {
+                        color: var(--color-white);
+                        text-align: center;
+                    }
+                } */
+
+                & .imgFrente{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
                 & img {
                     border-radius: 1rem;
                     height: 20rem;
                     transition: .5s ease;
+                    z-index: 1;
                     
                     &:hover {
                         opacity: 0;
@@ -185,6 +207,15 @@ main {
                 }
             }
         }
+    }
+    & #books {
+        background: linear-gradient(180deg, rgb(98, 0, 172) 0%,  rgb(78, 222, 201)100%);
+    }
+    & #movie {
+        background: linear-gradient(180deg, rgb(78, 222, 201) 0%,  rgb(0, 64, 160) 100%);
+    }
+    & #music {
+        background: linear-gradient(180deg, rgb(0, 64, 160) 0%,  rgb(153, 109, 240) 100%);
     }
 }
 
